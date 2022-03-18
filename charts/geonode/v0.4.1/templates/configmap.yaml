@@ -270,6 +270,7 @@ data:
     }
 
     http {
+        server_names_hash_bucket_size 1024;
         server {
             listen              80;
             server_name         {{ .Values.global.geonodeSiteName }} www.{{ .Values.global.geonodeSiteName }} {{ include "geonode.fullname" . }} 127.0.0.1 nginx;
